@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --Card-border-radius: 0.3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+}
+.wrapper {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    font-family: "Big Shoulders Display", cursive;
+    padding: 3rem;
+    max-width: 100%;
+}
+.card .heading {
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+.card .text {
+    color: var(--Transparent-white);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.card .button {
+    color: inherit;
+    background-color: var(--Very-light-gray);
+    font-size: 1.1rem;
+    padding: 0.5em 1.5em;
+    margin: 0.5rem 0;
+    border-radius: 1.5em;
+    border: 0.1rem solid transparent;
+    transition: color 0.5s, border-color 0.5s;
+}
+.card .button:hover {
+    background-color: transparent;
+    color: var(--Transparent-white);
+    border-color: var(--Transparent-white);
+}
+
+.card-1 {
+    background-color: var(--Bright-orange);
+    color: var(--Bright-orange);
+    border-radius: var(--Card-border-radius) var(--Card-border-radius) 0 0;
+}
+
+.card-2 {
+    background-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+    border-radius: 0;
+}
+
+.card-3 {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
+    border-radius: 0 0 var(--Card-border-radius) var(--Card-border-radius);
+}
+
+@media (min-width: 625px) {
+    .wrapper {
+        flex-flow: row wrap;
+    }
+    .card {
+        width: 40%;
+        max-width: 24rem;
+        padding: 2rem;
+        /* height: 28rem; */
+    }
+    .card .button {
+        margin-top: 3rem;
+    }
+
+    .card-1 {
+        border-radius: var(--Card-border-radius) 0 0 0;
+        align-self: stretch;
+    }
+    .card-2 {
+        border-radius: 0 var(--Card-border-radius) 0 0;
+        align-self: stretch;
+    }
+    .card-3 {
+        width: 80%;
+        max-width: 48rem;
+        /* height: initial; */
+        border-radius: 0 0 var(--Card-border-radius) var(--Card-border-radius);
+    }
+}
+
+@media (min-width: 995px) {
+    .wrapper {
+        padding: 0;
+        min-height: 100vh;
+    }
+    .card {
+        max-width: 18rem;
+        height: initial;
+    }
+
+    .card-1 {
+        border-radius: var(--Card-border-radius) 0 0 var(--Card-border-radius);
+        align-self: center;
+    }
+    .card-2 {
+        border-radius: 0;
+        align-self: center;
+    }
+    .card-3 {
+        border-radius: 0 var(--Card-border-radius) var(--Card-border-radius) 0;
+    }
+}
