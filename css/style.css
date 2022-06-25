@@ -57,6 +57,7 @@ body {
     background-color: transparent;
     color: var(--Transparent-white);
     border-color: var(--Transparent-white);
+    cursor: pointer;
 }
 
 .card-1 {
